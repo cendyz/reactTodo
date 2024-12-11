@@ -9,11 +9,14 @@ const NavMobileMenu = () => {
 	const [active, setActive] = useState(null)
 
 	const handleActive = index => {
-		setActive(prevActive => (prevActive === index ? null : index))
+		setActive(prevItem => (prevItem === index ? null : index))
 	}
 	return (
 		<div className='mobile-menu'>
-			{mobileMenuData.map(({ name }, index) => {
+			{mobileMenuData.map(({ name, group }, index) => {
+				const activeMenu = mobileInnerMenu.find(
+					menu => menu.group === group
+				)
 				return (
 					<div className='mobile-link-box' key={nanoid()}>
 						<div className='main-link' onClick={() => handleActive(index)}>
@@ -21,20 +24,18 @@ const NavMobileMenu = () => {
 							<img
 								src={redArrow}
 								alt='menu link arrow icon'
-								className='mobile-arrow'
 								style={{
 									transform:
 										active === index ? 'rotate(180deg)' : 'rotate(0deg)',
-									transition: 'transform 0.2s',
 								}}
 							/>
 						</div>
-						{active === index && (
+						{active === index && activeMenu && (
 							<div className='mobile-inner-link-box'>
-								{mobileInnerMenu.map(({ innerName }) => {
+								{activeMenu.links.map(link => {
 									return (
 										<a href='#' className='mobile-link' key={nanoid()}>
-											{innerName}
+											{link}
 										</a>
 									)
 								})}
@@ -57,6 +58,3 @@ const NavMobileMenu = () => {
 	)
 }
 export default NavMobileMenu
-
-{
-}

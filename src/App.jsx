@@ -3,12 +3,13 @@ import Values from 'values.js'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { nanoid } from 'nanoid'
-import { Nav } from './components/index'
+import { Nav, Header } from './components/index'
 
 const App = () => {
 	return (
 		<>
 			<Nav />
+			<Header />
 		</>
 	)
 }
@@ -16,7 +17,7 @@ export default App
 
 // Product
 
-//   Overview
+//   Overview //
 //   Pricing
 //   Marketplace
 //   Features

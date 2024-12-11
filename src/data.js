@@ -1,23 +1,26 @@
 export const mobileMenuData = [
-	{
-		name: 'Product',
-	},
-	{
-		name: 'Company',
-	},
-	{
-		name: 'Connect',
-	},
+	{ name: 'Product', group: 'first' },
+	{ name: 'Company', group: 'second' },
+	{ name: 'Connect', group: 'three' },
 ]
 
 export const mobileInnerMenu = [
 	{
-		innerName: 'Contact',
+		group: 'first',
+		links: [
+			'Overview',
+			'Pricing',
+			'Marketplace',
+			'Features',
+			'Integrations',
+		],
 	},
 	{
-		innerName: 'Newsletter',
+		group: 'second',
+		links: ['About', 'Team', 'Blog', 'Careers'],
 	},
 	{
-		innerName: 'Linkedin',
+		group: 'three',
+		links: ['Contact', 'Newsletter', 'LinkedIn'],
 	},
 ]
