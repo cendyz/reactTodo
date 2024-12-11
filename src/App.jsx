@@ -3,105 +3,89 @@ import Values from 'values.js'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { nanoid } from 'nanoid'
-
-const setLocalStorage = items => {
-	localStorage.setItem('list', JSON.stringify(items))
-}
-
-const getLocalStorage = () => {
-	let list = localStorage.getItem('list')
-
-	if (list) {
-		list = JSON.parse(localStorage.getItem('list'))
-	} else {
-		list = []
-	}
-	return list
-}
-
-const defaultList = JSON.parse(localStorage.getItem('list') || '')
+import { Nav } from './components/index'
 
 const App = () => {
-	getLocalStorage()
-	const [item, setItem] = useState('')
-	const [tasks, setTask] = useState(defaultList)
-	const [complete, setComplete] = useState(false)
-
-	const handleSubmit = e => {
-		e.preventDefault()
-		if (!item) return
-		const newItem = {
-			id: nanoid(),
-			name: item,
-			completed: false,
-		}
-
-		setTask([...tasks, newItem])
-		setLocalStorage([...tasks, newItem])
-		setItem('')
-	}
-
-	const handleComplete = id => {
-		const newItems = tasks.map(task => {
-			if (task.id === id) {
-				return { ...task, completed: !task.completed }
-			}
-			return task
-		})
-		setTask(newItems)
-		setLocalStorage(newItems)
-	}
-
-	const handleDelete = id => {
-		const updatedList = tasks.filter(item => item.id !== id)
-		setTask(updatedList)
-		setLocalStorage(updatedList)
-	}
-
 	return (
-		<section className='container'>
-			<form className='form' onSubmit={handleSubmit}>
-				<input
-					type='text'
-					className='input'
-					value={item}
-					onChange={e => setItem(e.target.value)}
-				/>
-				<button type='submit' className='btn'>
-					Add quest
-				</button>
-			</form>
-			<div className='items'>
-				{tasks.map(item => {
-					const { completed, name, id } = item
-					return (
-						<div className='item-box' key={nanoid()}>
-							<div className='left-box'>
-								<input
-									type='checkbox'
-									className='check'
-									checked={completed}
-									onChange={() => handleComplete(id)}
-								/>
-								<p
-									className='quest'
-									style={{
-										textDecoration: item.completed && 'line-through',
-									}}>
-									{name}
-								</p>
-							</div>
-							<button
-								type='button'
-								className='delete-btn'
-								onClick={() => handleDelete(id)}>
-								Delete
-							</button>
-						</div>
-					)
-				})}
-			</div>
-		</section>
+		<>
+			<Nav />
+		</>
 	)
 }
 export default App
+
+// Product
+
+//   Overview
+//   Pricing
+//   Marketplace
+//   Features
+//   Integrations
+
+//   Company
+
+//   About
+//   Team
+//   Blog
+//   Careers
+
+//   Connect
+
+//   Contact
+//   Newsletter
+//   LinkedIn
+
+//   Login
+//   Sign Up
+
+//   A modern publishing platform
+//   Grow your audience and build your online brand
+
+//   Start for Free
+//   Learn More
+
+//   Designed for the future
+
+//   Introducing an extensible editor
+//   Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+//   The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+//   videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+//   change the looks of a blog.
+
+//   Robust content management
+//   Flexible content management enables users to easily move through posts. Increase the usability of your blog
+//   by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+
+//   State of the Art Infrastructure
+//   With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+//   This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+
+//   Free, open, simple
+//   Blogr is a free and open source application backed by a large community of helpful developers. It supports
+//   features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+//   and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+
+//   Powerful tooling
+//   Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+//   capable of producing even the most complicated sites.
+
+//   Product
+
+//   Overview
+//   Pricing
+//   Marketplace
+//   Features
+//   Integrations
+
+//   Company
+
+//   About
+//   Team
+//   Blog
+//   Careers
+
+//   Connect
+
+//   Contact
+//   Newsletter
+//   LinkedIn

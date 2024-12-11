@@ -4,75 +4,62 @@
 	--moderate-cyan: #3cb4ac;
 	--dark-cyan: #147b74;
 	--black: #000000;
-	--dark-gray: #7a7a7a;
+	--white-text: hsl(0, 0%, 100%);
+	--very-dark-blue-headings: hsl(208, 49%, 24%);
+	--very-dark-grayish-blue-body-copy: hsl(207, 13%, 34%);
+	--grayish-blue-footer-text: hsl(240, 2%, 79%);
+	--very-dark-desaturated-blue: hsl(237, 23%, 32%);
+	--very-light-red: #ff8f70;
+	--light-red-CTA-text: #ff525d;
 }
 
 body {
-	display: grid;
-	place-items: center;
 	font-size: 16px;
-	font-family: 'Commissioner', sans-serif;
-	background-color: 	#141314;
+	font-family: 'Overpass', sans-serif;
+	font-family: 'Ubuntu', serif;
+	background-color: rgb(245, 143, 125);
 }
 
-.container {
-	padding: 1.5em;
-	border-radius: 1em;
-	display: grid;
-	place-items: center;
-	width: 500px;
-	background-color: #deddd5;
-	color: #220d30;
-}
-
-.form, .left-box {
-	display: flex;
-	align-items: center;
-}
-
-.left-box {
-	column-gap: .5em;
-}
-
-.check {
-	transform: scale(1.1);
-}
-
-.line {
-	text-decoration: line-through;
-}
-
-.input {
-	border: 2px solid #220d30;
-	padding: 0.5em;
-}
-
-.btn {
-	padding: 0.5em 1em;
-	background-color: #220d30;
-	color: 	#deddd5;
-	font-size: 1.6rem;
-	text-align: center;
-	border-bottom-right-radius: .5em;
-	border-top-right-radius: .5em;
-}
-
-.items {
-	margin-top: 1.5em;
-	width: 90%;
-}
-
-.item-box {
-	margin-bottom: 0.5em;
-	display: flex;
-	justify-content: space-between;
-}
-
-.delete-btn {
-	padding: 0.3em;
-	border-radius: .3em;
-	color: #deddd5;
-	background-color:#141314;
+.nav-desktop {
+	display: none;
 }
 
 
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// ## Colors
+
+// ### Primary
+
+// -
+// - Very light red (CTA hover background): hsl(355, 100%, 74%)
+
+// -
+// - Very dark black blue (footer background): hsl(240, 10%, 16%)
+
+// ### Gradient
+
+// Background gradient - Intro/CTA mobile nav:
+
+// -
+// - Light red:
+
+// Background gradient - body:
+
+// - Very dark gray blue: hsl(237, 17%, 21%)
+// -
+
+// ## Typography
+
+// ### Body Copy
+
+// - Font size: 16px
+
+// ### Fonts
+
+// - Family: [Overpass](https://fonts.google.com/specimen/Overpass?preview.text_type=custom)
+// - Weights: 300, 600
+
+// - Family: [Ubuntu](https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom)
+// - Weights: 400, 500, 700
