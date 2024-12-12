@@ -13,9 +13,8 @@ const NavMobileMenu = () => {
 	}
 	return (
 		<div className='mobile-menu'>
-			{mobileMenuData.map(({ name, group }, index) => {
-				const activeMenu = mobileInnerMenu.find(
-					menu => menu.group === group
+			{mobileMenuData.map(({  }, index) => {
+			
 				)
 				return (
 					<div className='mobile-link-box' key={nanoid()}>
@@ -30,9 +29,9 @@ const NavMobileMenu = () => {
 								}}
 							/>
 						</div>
-						{active === index && activeMenu && (
+						{active === index &&  (
 							<div className='mobile-inner-link-box'>
-								{activeMenu.links.map(link => {
+								
 									return (
 										<a href='#' className='mobile-link' key={nanoid()}>
 											{link}
