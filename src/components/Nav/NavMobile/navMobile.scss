@@ -14,9 +14,11 @@
 }
 
 .nav-mobile {
+	position: relative;
 	width: 100%;
 	padding: 4em 1.5em 0;
 	justify-content: space-between;
+	z-index: 100;
 }
 
 .mobile-menu,
@@ -28,7 +30,7 @@
 .mobile-link,
 .login-box,
 .btn-sign {
-	font-size: 1.7rem;
+	font-size: 1.8rem;
 	font-weight: 500;
 }
 
@@ -42,9 +44,14 @@
 	row-gap: 1.5em;
 	position: absolute;
 	width: calc(100% - 3em);
-	padding: 1.8em;
-	top: 17%;
+	padding: 2.5em;
+	top: 137%;
 	background-color: white;
+	font-family: 'Overpass', sans-serif;
+	z-index: 100;
+	-webkit-box-shadow: 0px 0px 24px 0px rgba(167, 167, 167, 1);
+	-moz-box-shadow: 0px 0px 24px 0px rgba(167, 167, 167, 1);
+	box-shadow: 0px 0px 24px 0px rgba(167, 167, 167, 1);
 }
 
 .mobile-link-box {
