@@ -1,14 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import './main.scss'
 
 const Main = () => {
-
-
-	return (
-		<main className='main'>
-		
-		</main>
-	)
+	return <main className='main'></main>
 }
 export default Main
-

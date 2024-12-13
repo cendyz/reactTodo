@@ -1,2 +1,13 @@
-@use '../../sass/utilities/index' as *;
+.example {
+  transition: all 0.75s;
+}
 
+.example.preEnter,
+.example.exiting {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.example.exited {
+  display: none;
+}

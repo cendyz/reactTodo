@@ -1,4 +1,5 @@
 import './header.scss'
+import headerImg from '../../images/mobile/bg-pattern-intro-mobile.svg'
 
 const Header = () => {
 	return (
@@ -14,7 +15,7 @@ const Header = () => {
 				</div>
 			</div>
 			<img
-				src='src/images/mobile/bg-pattern-intro-mobile.svg'
+				src={headerImg}
 				alt='Header img'
 				className='img'
 			/>

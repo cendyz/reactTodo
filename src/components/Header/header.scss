@@ -1,11 +1,15 @@
 .header {
-	position: absolute;
+	position: relative;
 	top: 0;
 	padding: 14em 0 10em;
 	font-family: 'Overpass', sans-serif;
 	text-align: center;
-	background: rgb(255,143,112);
-background: linear-gradient(142deg, rgba(255,143,112,1) 0%, rgba(252,113,122,1) 100%);
+	background: rgb(255, 143, 112);
+	background: linear-gradient(
+		142deg,
+		rgba(255, 143, 112, 1) 0%,
+		rgba(252, 113, 122, 1) 100%
+	);
 	border-bottom-left-radius: 7em;
 	overflow: hidden;
 	width: 100%;

@@ -3,13 +3,14 @@ import Values from 'values.js'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { nanoid } from 'nanoid'
-import { Nav, Header } from './components/index'
+import { Nav, Header, Main } from './components/index'
 
 const App = () => {
 	return (
 		<>
 			<Nav />
 			<Header />
+			<Main />
 		</>
 	)
 }
