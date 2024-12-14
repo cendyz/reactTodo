@@ -29,11 +29,12 @@
 }
 
 .mobile-menu {
+	position: absolute;
+	top: 130%;
+	width: calc(100% - 3em);
 	display: grid;
 	row-gap: 1.5em;
-	grid-column: 1/3;
 	padding: 2.5em;
-	margin-top: 2.6em;
 	background-color: white;
 	font-family: 'Overpass', sans-serif;
 	z-index: 110;
@@ -53,15 +54,21 @@
 
 .mobile-inner-link-box {
 	margin-top: 1em;
-	padding: 1.5em;
 	row-gap: 1em;
 	width: 100%;
 	background-color: rgb(243, 243, 243);
-	transition: height 0.2s;
 }
 
 .mobile-link {
 	color: rgb(29, 29, 95);
+
+	&:nth-child(1) {
+		padding-top: 1.5em;
+	}
+
+	&:last-child {
+		padding-bottom: 1.5em;
+	}
 }
 
 .login-box {

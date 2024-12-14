@@ -8,9 +8,9 @@
 
 .nav-mobile {
 	grid-row: 1/2;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: auto auto;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
 	padding: 4em 1.5em 0;
 	z-index: 100;
 }

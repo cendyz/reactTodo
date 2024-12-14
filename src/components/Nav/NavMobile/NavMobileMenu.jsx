@@ -5,7 +5,7 @@ import './navMobileMenu.scss'
 import { mobileMenuData, mobileInnerMenu } from '../../../data'
 import redArrow from '../../../images/icon-arrow-dark.svg'
 
-const NavMobileMenu = ({ firstOpen, open, isClosing}) => {
+const NavMobileMenu = ({ firstOpen, open, isClosing }) => {
 	const [active, setActive] = useState(null)
 	const [openedItems, setOpenedItems] = useState(new Set())
 	const [closedItems, setClosedItems] = useState(new Set())
@@ -16,8 +16,6 @@ const NavMobileMenu = ({ firstOpen, open, isClosing}) => {
 			setHasOpened(true)
 		}
 	}, [firstOpen])
-
-	
 
 	const handleActive = index => {
 		setActive(prevItem => (prevItem === index ? null : index))
@@ -41,7 +39,10 @@ const NavMobileMenu = ({ firstOpen, open, isClosing}) => {
 	}
 
 	return (
-		<div className={`mobile-menu ${open && 'active-mobile-menu'} ${isClosing && 'closing-mobile-menu'}`}>
+		<div
+			className={`mobile-menu ${open && 'active-mobile-menu'} ${
+				isClosing && 'closing-mobile-menu'
+			}`}>
 			{mobileMenuData.map(({ name, group }, index) => {
 				const actualGroup = mobileInnerMenu.find(
 					menu => menu.group === group
@@ -68,7 +69,10 @@ const NavMobileMenu = ({ firstOpen, open, isClosing}) => {
 							/>
 						</div>
 						{active === index && actualGroup && (
-							<div className='mobile-inner-link-box'>
+							<div
+								className={`mobile-inner-link-box ${
+									open && 'active-mobile-menu'
+								} ${isClosing && 'closing-mobile-menu'}`}>
 								{actualGroup.links.map(link => {
 									return (
 										<a href='#' className='mobile-link' key={nanoid()}>
@@ -95,3 +99,5 @@ const NavMobileMenu = ({ firstOpen, open, isClosing}) => {
 	)
 }
 export default NavMobileMenu
+
+
