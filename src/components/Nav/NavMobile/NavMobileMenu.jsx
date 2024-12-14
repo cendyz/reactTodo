@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { nanoid } from 'nanoid'
+import './navMobileMenu.scss'
 
 import { mobileMenuData, mobileInnerMenu } from '../../../data'
 import redArrow from '../../../images/icon-arrow-dark.svg'
@@ -9,6 +10,7 @@ const NavMobileMenu = ({ firstOpen }) => {
 	const [openedItems, setOpenedItems] = useState(new Set())
 	const [closedItems, setClosedItems] = useState(new Set())
 	const [hasOpened, setHasOpened] = useState(false)
+	console.log(openedItems);
 
 	useEffect(() => {
 		if (!firstOpen) {

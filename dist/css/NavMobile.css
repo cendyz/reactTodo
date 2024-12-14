@@ -1,0 +1,64 @@
+.nav-mobile,
+.mobile-link-box,
+.mobile-inner-link-box,
+.login-box,
+.main-link {
+  display: flex;
+}
+
+.nav-mobile {
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  padding: 4em 1.5em 0;
+  z-index: 100;
+}
+
+.nav-mobile-logo {
+  grid-column: 1/2;
+}
+
+.mobile-hamburger {
+  grid-column: 2/3;
+  display: block;
+  margin-left: auto;
+}
+
+.mobile-title {
+  padding: 0 0.5em;
+}
+
+.arrow-img {
+  transition: transform 0.2s;
+}
+
+.rotated {
+  animation: letsRotate 0.2s forwards;
+}
+
+.no-rotated {
+  animation: letsBack 0.2s forwards;
+}
+
+@keyframes letsRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes letsBack {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@media (min-width: 992px) {
+  .nav-mobile {
+    display: none;
+  }
+}/*# sourceMappingURL=NavMobile.css.map */

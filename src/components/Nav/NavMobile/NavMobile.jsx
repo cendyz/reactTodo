@@ -5,7 +5,7 @@ import hamburgerIcon from '../../../images/icon-hamburger.svg'
 import closeMenuIcon from '../../../images/icon-close.svg'
 
 import NavMobileMenu from './NavMobileMenu'
-import './navMobileAndMenu.scss'
+import './navMobile.scss'
 
 const NavMobile = () => {
 	const [open, setOpen] = useState(false)
