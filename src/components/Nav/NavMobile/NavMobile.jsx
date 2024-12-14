@@ -18,17 +18,17 @@ const NavMobile = () => {
 		}
 	}, [open])
 
-	   const handleToggle = () => {
-				if (open) {
-					setIsClosing(true)
-					setTimeout(() => {
-						setOpen(false)
-						setIsClosing(false)
-					}, 100)
-				} else {
-					setOpen(true)
-				}
-			}
+	const handleToggle = () => {
+		if (open) {
+			setIsClosing(true)
+			setTimeout(() => {
+				setOpen(false)
+				setIsClosing(false)
+			}, 100)
+		} else {
+			setOpen(true)
+		}
+	}
 
 	return (
 		<nav className='nav-mobile'>
