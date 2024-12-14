@@ -5,18 +5,19 @@ import './navMobileMenu.scss'
 import { mobileMenuData, mobileInnerMenu } from '../../../data'
 import redArrow from '../../../images/icon-arrow-dark.svg'
 
-const NavMobileMenu = ({ firstOpen }) => {
+const NavMobileMenu = ({ firstOpen, open, isClosing}) => {
 	const [active, setActive] = useState(null)
 	const [openedItems, setOpenedItems] = useState(new Set())
 	const [closedItems, setClosedItems] = useState(new Set())
 	const [hasOpened, setHasOpened] = useState(false)
-	console.log(openedItems);
 
 	useEffect(() => {
 		if (!firstOpen) {
 			setHasOpened(true)
 		}
 	}, [firstOpen])
+
+	
 
 	const handleActive = index => {
 		setActive(prevItem => (prevItem === index ? null : index))
@@ -40,7 +41,7 @@ const NavMobileMenu = ({ firstOpen }) => {
 	}
 
 	return (
-		<div className='mobile-menu'>
+		<div className={`mobile-menu ${open && 'active-mobile-menu'} ${isClosing && 'closing-mobile-menu'}`}>
 			{mobileMenuData.map(({ name, group }, index) => {
 				const actualGroup = mobileInnerMenu.find(
 					menu => menu.group === group

@@ -19,10 +19,16 @@
   grid-column: 1/2;
 }
 
+.nav-mobile-btn {
+  display: inline-block;
+  cursor: default;
+}
+
 .mobile-hamburger {
   grid-column: 2/3;
   display: block;
   margin-left: auto;
+  cursor: pointer;
 }
 
 .mobile-title {
