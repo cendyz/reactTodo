@@ -14,11 +14,7 @@ const Header = () => {
 					<button className='btn'>Learn More</button>
 				</div>
 			</div>
-			<img
-				src={headerImg}
-				alt='Header img'
-				className='img'
-			/>
+			<img src={headerImg} alt='Header img' className='img' />
 		</header>
 	)
 }

@@ -22,8 +22,14 @@ const Main = () => {
 				</p>
 				<h2 className='section-title'>Robust content management</h2>
 				<p className='section-text'>
-					Flesible content management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you're in full control.
+					Flesible content management enables users to easily move through
+					posts. Increase the usability of your blog by adding customized
+					categories, sections, format, or flow. With this functionality,
+					you're in full control.
 				</p>
+			</section>
+			<section className='section'>
+				<img src='src/images/bg-pattern-circles.svg' alt='' className='section-img' />
 			</section>
 		</main>
 	)

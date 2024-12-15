@@ -25,11 +25,14 @@ body {
 
 #root {
 	display: grid;
-	grid-row: repeat(auto);
+	grid-template-rows: repeat(3, auto);
 	grid-column: 1;
 }
 
-.header, .nav-mobile, .main, .footer {
+.header,
+.nav-mobile,
+.main,
+.footer {
 	grid-column: 1/-1;
 }
 

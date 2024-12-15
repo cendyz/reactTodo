@@ -4,26 +4,28 @@ import logoImg from '../../../images/logo.svg'
 import hamburgerIcon from '../../../images/icon-hamburger.svg'
 import closeMenuIcon from '../../../images/icon-close.svg'
 
-import NavMobileMenu from './NavMobileMenu'
+import NavMobileMenu from './NavMobileMenu/NavMobileMenu'
 import './navMobile.scss'
 
 const NavMobile = () => {
 	const [open, setOpen] = useState(false)
-	const [firstOpen, setFirstOpen] = useState(true)
-	const [isClosing, setIsClosing] = useState(false)
+	const [isOpen, setIsOpened] = useState(false)
+	const [isClosed, setIsClosed] = useState(false)
 
 	useEffect(() => {
 		if (open) {
-			setFirstOpen(false)
+			setIsOpened(true)
+		} else {
+			setIsOpened(false)
 		}
 	}, [open])
 
-	const handleToggle = () => {
+	const handleOpen = () => {
 		if (open) {
-			setIsClosing(true)
+			setIsClosed(true)
 			setTimeout(() => {
 				setOpen(false)
-				setIsClosing(false)
+				setIsClosed(false)
 			}, 100)
 		} else {
 			setOpen(true)
@@ -42,16 +44,10 @@ const NavMobile = () => {
 					src={open ? closeMenuIcon : hamburgerIcon}
 					alt='menu icon'
 					className='mobile-hamburger'
-					onClick={handleToggle}
+					onClick={handleOpen}
 				/>
 			</button>
-			{open && (
-				<NavMobileMenu
-					firstOpen={firstOpen}
-					open={open}
-					isClosing={isClosing}
-				/>
-			)}
+			{open && <NavMobileMenu isOpen={isOpen} isClosed={isClosed} />}
 		</nav>
 	)
 }
