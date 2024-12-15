@@ -5,11 +5,28 @@ import './NavMobileMenu.scss'
 import { mobileMenuData, mobileInnerMenu } from '../../../../data'
 import redArrow from '../../../../images/icon-arrow-dark.svg'
 
-const NavMobileMenu = ({isOpen, isClosed}) => {
+const NavMobileMenu = ({ isOpen, isClosed }) => {
 	const [active, setActive] = useState(null)
+	const [closedArrow, setClosedArrow] = useState(new Set())
+	const [opennedArrow, setOpenedArrow] = useState(new Set())
 
 	const handleActive = index => {
 		setActive(link => (link === index ? null : index))
+		setOpenedArrow(prevItems => {
+			const newItems = new Set(prevItems)
+			if (newItems.has(index)) {
+				newItems.delete(index)
+				setClosedArrow(prevClosed => new Set(prevClosed).add(index))
+			} else {
+				newItems.add(index)
+				setClosedArrow(prevClosed => {
+					const actualClosed = new Set(prevClosed)
+					actualClosed.delete(index)
+					return actualClosed
+				})
+			}
+			return newItems
+		})
 	}
 
 	return (
@@ -26,7 +43,13 @@ const NavMobileMenu = ({isOpen, isClosed}) => {
 						<div className='main-link' onClick={() => handleActive(index)}>
 							<p className='mobile-title'>{name}</p>
 							<img
-								className={`arrow-img`}
+								className={`arrow-img ${
+									active === index
+										? 'rotated'
+										: closedArrow.has(index) || opennedArrow.has(index)
+										? 'no-rotated'
+										: ''
+								}`}
 								src={redArrow}
 								alt='menu link arrow icon'
 							/>
