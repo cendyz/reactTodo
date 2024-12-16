@@ -1,4 +1,4 @@
-import './navDesktop.scss'
+import './NavDesktop.scss'
 
 const NavDesktop = () => {
 	return <nav className='nav-desktop'></nav>

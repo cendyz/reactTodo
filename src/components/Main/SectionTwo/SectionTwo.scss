@@ -1,0 +1,61 @@
+.section-two {
+	&.section {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
+		padding: 7em 0;
+	}
+}
+
+.phones-img {
+	margin-bottom: 2em;
+	grid-row: 1/3;
+	grid-column: 1/-1;
+	z-index: 10;
+}
+
+.text-container {
+	position: relative;
+	padding: 14em 0 7em;
+	grid-row: 2/4;
+	grid-column: 1/-1;
+	background-color: #333349;
+	border-top-right-radius: 10em;
+	border-bottom-left-radius: 10em;
+	overflow: hidden;
+}
+
+.two-title,
+.section-text {
+	z-index: 10;
+	position: relative;
+}
+
+.section-title {
+	&.two-title {
+		color: white;
+		font-size: 3.2rem;
+	}
+}
+
+.section-text {
+	&.two-text {
+		margin-top: 2em;
+		color: var(--grayish-blue-footer-text);
+		padding: 0 2em;
+		font-size: 1.55rem;
+	}
+}
+
+.circles-box {
+	position: absolute;
+	width: 100%;
+	top: -7em;
+	left: 49%;
+	transform: translateX(-50%);
+}
+
+.circles {
+	width: 100%;
+	transform: scale(1.6);
+}

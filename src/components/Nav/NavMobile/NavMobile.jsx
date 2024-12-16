@@ -4,7 +4,7 @@ import logoImg from '../../../images/logo.svg'
 import hamburgerIcon from '../../../images/icon-hamburger.svg'
 import closeMenuIcon from '../../../images/icon-close.svg'
 
-import NavMobileMenu from './NavMobileMenu/NavMobileMenu'
+import NavMobileMenu from './NavMobileMenu'
 import './navMobile.scss'
 
 const NavMobile = () => {
