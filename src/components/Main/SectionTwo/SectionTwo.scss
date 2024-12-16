@@ -1,6 +1,7 @@
 .section-two {
 	&.section {
 		display: grid;
+		place-items: center;
 		grid-template-columns: 1fr;
 		grid-template-rows: auto auto;
 		padding: 7em 0;

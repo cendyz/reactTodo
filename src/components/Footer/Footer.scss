@@ -1,0 +1,36 @@
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 5em 0;
+	background-color: var(--very-dark-black-blue-footer-background);
+	border-top-right-radius: 8em;
+}
+
+.footer-logo {
+	margin-bottom: 5em;
+	width: 30%;
+}
+
+.links-container {
+	margin-bottom: 3em;
+}
+
+.main-link {
+	display: block;
+	margin-bottom: 1.5em;
+	text-align: center;
+	color: var(--white-text);
+	font-size: 1.7rem;
+	font-weight: 500;
+}
+
+.links-box {
+	text-align: center;
+}
+
+.second-link {
+    display: block;
+    padding: 0.3em 0;
+	color: var(--grayish-blue-footer-text);
+}
