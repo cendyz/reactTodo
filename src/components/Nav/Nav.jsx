@@ -1,9 +1,10 @@
 import NavMobile from './NavMobile'
+import NavDesktop from './NavDesktop'
 
 const Nav = () => {
 	return (
 		<>
-			{/* <NavDesktop /> */}
+			<NavDesktop />
 			<NavMobile />
 		</>
 	)

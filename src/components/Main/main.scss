@@ -1,27 +1,28 @@
 .section {
-  padding: 7em 1.5em 0;
+	padding: 7em 1.5em 0;
 	display: flex;
 	flex-direction: column;
-  align-items: center;
-	row-gap: 2em;
-  font-family: 'Overpass', sans-serif;
+	align-items: center;
+	row-gap: 1.5em;
+	font-family: 'Overpass', sans-serif;
 }
 
 .section-title {
-  padding: 0 1em;
-  font-size: 2.5rem;
-  text-align: center;
-  font-weight: 600;
-  color: #2c3545;
+	padding: 0 1em;
+	font-size: 2.5rem;
+	text-align: center;
+	font-weight: 600;
+	color: #2c3545;
 }
 
 .section-text {
-  font-size: 1.7rem;
-  line-height: 1.5;
-  text-align: center;
-  color: #445964;
+	margin-bottom: 1em;
+	font-size: 1.7rem;
+	line-height: 1.5;
+	text-align: center;
+	color: #445964;
 }
 
 .section-img {
-  max-width: 100%;
+	max-width: 100%;
 }
