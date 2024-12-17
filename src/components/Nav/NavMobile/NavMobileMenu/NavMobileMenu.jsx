@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { nanoid } from 'nanoid'
 import './NavMobileMenu.scss'
 
@@ -51,7 +51,7 @@ const NavMobileMenu = ({ isOpen, isClosed }) => {
 										: ''
 								}`}
 								src={redArrow}
-								alt='menu link arrow icon'
+								alt='arrow icon'
 							/>
 						</div>
 						{active === index && (

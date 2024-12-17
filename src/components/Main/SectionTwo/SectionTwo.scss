@@ -1,3 +1,5 @@
+@use '../../../sass/colors' as *;
+
 .section-two {
 	&.section {
 		display: grid;
@@ -20,7 +22,7 @@
 	padding: 14.5em 0 10em;
 	grid-row: 2/4;
 	grid-column: 1/-1;
-	background-color: #333349;
+	background-color: $card-bg-dark-gray;
 	border-top-right-radius: 10em;
 	border-bottom-left-radius: 10em;
 	overflow: hidden;
@@ -34,7 +36,7 @@
 
 .section-title {
 	&.two-title {
-		color: white;
+		color: $text-white;
 		font-size: 3.2rem;
 	}
 }
@@ -42,7 +44,7 @@
 .section-text {
 	&.two-text {
 		margin-top: 2em;
-		color: var(--grayish-blue-footer-text);
+		color: $text-white;
 		padding: 0 1.5em;
 		font-size: 1.7rem;
 	}

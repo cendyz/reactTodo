@@ -1,0 +1,21 @@
+@use './sass/reset';
+
+body {
+	font-size: 16px;
+	font-family: 'Overpass', sans-serif;
+	font-family: 'Ubuntu', serif;
+	background-color: white;
+}
+
+#root {
+	display: grid;
+	grid-template-rows: repeat(3, auto);
+	grid-column: 1;
+}
+
+.header,
+.nav-mobile,
+.main,
+.footer {
+	grid-column: 1/-1;
+}

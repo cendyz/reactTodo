@@ -1,9 +1,11 @@
+@use '../../sass/colors' as *;
+
 .footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding: 5em 0 3em;
-	background-color: var(--very-dark-black-blue-footer-background);
+	background-color: $footer-bg-dark-blue;
 	border-top-right-radius: 8em;
 }
 
@@ -18,15 +20,14 @@
 
 .footer-main-link {
 	&.main-link {
-	display: block;
-	margin-bottom: 1.5em;
-	text-align: center;
-	color: var(--white-text);
-	font-size: 1.7rem;
-	font-weight: 500;
+		display: block;
+		margin-bottom: 1.5em;
+		text-align: center;
+		color: $text-white;
+		font-size: 1.9rem;
+		font-weight: 500;
+	}
 }
-}
-
 
 .links-box {
 	text-align: center;
@@ -35,5 +36,5 @@
 .second-link {
 	display: block;
 	padding: 0.3em 0;
-	color: var(--grayish-blue-footer-text);
+	color: $footer-text-gray;
 }

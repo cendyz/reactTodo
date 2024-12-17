@@ -1,3 +1,5 @@
+@use '../../../../sass/colors' as *;
+
 .mobile-menu,
 .mobile-inner-link-box {
 	border-radius: 0.5em;
@@ -35,11 +37,9 @@
 	display: grid;
 	row-gap: 1.5em;
 	padding: 2.5em;
-	background-color: white;
+	background-color: $text-white;
 	font-family: 'Overpass', sans-serif;
 	z-index: 110;
-	-webkit-box-shadow: 0px 0px 24px 0px rgba(167, 167, 167, 1);
-	-moz-box-shadow: 0px 0px 24px 0px rgba(167, 167, 167, 1);
 	box-shadow: 0px 0px 24px 0px rgba(167, 167, 167, 1);
 	opacity: 0;
 
@@ -56,11 +56,11 @@
 	margin-top: 1em;
 	row-gap: 1em;
 	width: 100%;
-	background-color: rgb(243, 243, 243);
+	background-color: $text-white;
 }
 
 .mobile-link {
-	color: rgb(29, 29, 95);
+	color: $footer-bg-dark-blue;
 
 	&:nth-child(1) {
 		padding-top: 1.5em;
@@ -89,11 +89,11 @@
 }
 
 .sign-link {
-	color: white;
+	color: $text-white;
 }
 
 .login-link {
-	color: #000000;
+	color: $pure-black;
 }
 
 .arrow-img {

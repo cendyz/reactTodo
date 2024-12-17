@@ -1,5 +1,6 @@
 import { Nav, Header, Main, Footer } from './components/index'
 
+
 const App = () => {
 	return (
 		<>

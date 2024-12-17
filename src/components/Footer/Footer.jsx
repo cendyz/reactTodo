@@ -12,7 +12,7 @@ const Footer = () => {
 				)
 				return (
 					<div className='links-container' key={nanoid()}>
-						<a href='#' className='main-link'>
+						<a href='#' className='footer-main-link main-link'>
 							{name}
 						</a>
 						{actualGroup.links.map(link => {
