@@ -107,6 +107,7 @@
 	.sign-btn,
 	.login-btn {
 		font-size: 1.8rem;
+		font-weight: 500;
 	}
 
 	.login-btn {
@@ -114,9 +115,10 @@
 	}
 
 	.sign-btn {
-		padding: 0.7em 1.4em;
+		padding: 0.7em 1.8em;
 		background-color: white;
 		border-radius: 1.3em;
+		color: #E0485D;
 		transition: background-color 0.2s, color 0.2s;
 
 		&:hover {

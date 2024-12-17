@@ -4,7 +4,7 @@
 	padding: 14em 0 10em;
 	font-family: 'Overpass', sans-serif;
 	text-align: center;
-	background: #FF8870;
+	background: #ff8870;
 	background: linear-gradient(
 		142deg,
 		rgba(255, 143, 112, 1) 0%,
@@ -65,4 +65,46 @@
 .inner-box {
 	position: relative;
 	z-index: 10;
+}
+
+@media (min-width: 992px) {
+	.header-title {
+		font-size: 6rem;
+	}
+
+	.header-text {
+		font-size: 2rem;
+	}
+
+	.img {
+		scale: 9;
+		top: 13%;
+		left: 68%;
+	}
+
+	.btns {
+		column-gap: 1.5em;
+	}
+
+	.btn {
+		font-size: 1.9rem;
+		padding: 0.9em 1.2em;
+	}
+
+	.learn,
+	.start {
+		transition: color 0.2s, background-color 0.2s;
+	}
+
+	.start:hover {
+		color: white;
+			background-color: #FE7C86;
+	}
+
+	.learn:hover {
+		&:hover {
+			color: #e18792;
+			background-color: #fff;
+		}
+	}
 }
