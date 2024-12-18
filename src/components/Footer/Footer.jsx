@@ -2,11 +2,13 @@ import { nanoid } from 'nanoid'
 import { mobileInnerMenu, mobileMenuData } from '../../data'
 import './Footer.scss'
 
+import logo from '../../images/logo.svg'
+
 const Footer = () => {
 	return (
 		<footer className='footer'>
 			<div className='wrapper'>
-				<img src='src/images/logo.svg' alt='' className='footer-logo' />
+				<img src={logo} alt='' className='footer-logo' />
 				{mobileMenuData.map(({ name, group }) => {
 					const actualGroup = mobileInnerMenu.find(
 						item => item.group === group
