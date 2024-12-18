@@ -10,7 +10,7 @@ const NavDesktop = () => {
 	const [activeItems, setActiveItems] = useState(new Set())
 	const [unActvieItems, setUnActiveItems] = useState(new Set())
 	const menuRef = useRef(null)
-	
+	const buttonRefs = useRef([])
 
 	const handleActive = (index, event) => {
 		event.stopPropagation()
@@ -33,7 +33,11 @@ const NavDesktop = () => {
 	}
 
 	const handleClickOutside = event => {
-		if (menuRef.current && !menuRef.current.contains(event.target)) {
+		if (
+			menuRef.current &&
+			!menuRef.current.contains(event.target) &&
+			!buttonRefs.current.some(ref => ref && ref.contains(event.target))
+		) {
 			setActive(false)
 		}
 	}
@@ -57,7 +61,8 @@ const NavDesktop = () => {
 						<div className='link-container' key={index}>
 							<div
 								className='click-box'
-								onClick={(event) => handleActive(index, event)}>
+								onClick={event => handleActive(index, event)}
+								ref={el => (buttonRefs.current[index] = el)}>
 								<a href='#' className='desktop-main-link'>
 									{name}
 								</a>
