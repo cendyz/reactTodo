@@ -28,6 +28,7 @@ const SectionTwo = () => {
 				<div className='circles-box'>
 					<img src={bgPattern} alt='Circles' className='circles' />
 				</div>
+				
 			</div>
 		</section>
 	)

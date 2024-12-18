@@ -30,8 +30,12 @@
 	font-size: 2.5rem;
 }
 
-.section-text {
+.section-under-title {
 	margin-bottom: 1em;
+}
+
+.section-text {
+	margin-bottom: 2.5em;
 	font-size: 1.7rem;
 	line-height: 1.5;
 	text-align: center;
@@ -49,7 +53,6 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
-
 
 	.section-title {
 		margin-bottom: 2em;
@@ -90,13 +93,13 @@
 	}
 
 	.text-box {
-		width: 50%;
+		width: 57%;
 	}
 }
 
 @media (min-width: 1440px) {
 	.section {
-		padding: 10em 0;
+		padding: 10em 0em 10em 0;
 	}
 	.section-img {
 		&.camera-img {
@@ -104,5 +107,10 @@
 			right: -15.3em;
 			width: 54em;
 		}
+	}
+
+	.text-box {
+		padding: 0 0 0 8em;
+		width: 47.8%;
 	}
 }

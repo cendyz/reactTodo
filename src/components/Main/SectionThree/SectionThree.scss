@@ -16,3 +16,52 @@
 		font-size: 1.73rem;
 	}
 }
+
+@media (min-width: 992px) {
+	.section {
+		&.section-three {
+			padding: 11.11vw 0;
+			padding: clamp(
+					7em,
+					calc(7em + ((160 - 112) * ((100vw - 992px) / (1440 - 992)))),
+					10em
+				)
+				0;
+			position: relative;
+			width: 100%;
+			max-width: 1440px;
+			margin: 0 auto;
+		}
+	}
+
+	.section-img {
+		&.camera-three-img {
+			position: absolute;
+			top: -4%;
+			left: -20.5%;
+			width: clamp(
+				42em,
+				calc(42em + ((1040 - 672) * ((100vw - 992px) / (1440 - 992)))),
+				65em
+			);
+		}
+	}
+
+	.text-box {
+		&.three {
+			margin-left: auto;
+			width: 35.34em;
+			margin-right: clamp(
+				0.5em,
+				0.5em + 148 * (100vw - 992px) / 448,
+				9.75em
+			);
+		}
+	}
+
+	.section-text {
+		&.three-text {
+			padding-left: 0;
+		}
+	}
+}

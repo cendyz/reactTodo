@@ -43,7 +43,7 @@
 
 .section-text {
 	&.two-text {
-		margin-top: 2em;
+		margin-top: 1em;
 		color: $text-white;
 		padding: 0 1.5em;
 		font-size: 1.7rem;
@@ -70,9 +70,6 @@
 		}
 	}
 
-.container {
-}
-
 	.section-title {
 		&.two-title {
 			font-size: 3.7rem;
@@ -81,8 +78,6 @@
 	.text-container {
 		width: 100vw;
 		display: flex;
-		justify-content: flex-end;
-		align-items: center;
 		padding: clamp(
 				2em,
 				calc(2em + ((80 - 32) * ((100vw - 992px) / (1440 - 992)))),
@@ -121,12 +116,8 @@
 	}
 
 	.phones-img {
-		position: absolute;
-		left: 7em;
-		display: block;
-		margin-left: auto;
-		grid-column: 1/2;
-		margin-bottom: 0;
+		top: 10%;
+		left: 5%;
 		width: clamp(
 			23em,
 			calc(23em + ((480 - 368) * ((100vw - 992px) / (1440 - 992)))),
@@ -138,6 +129,16 @@
 		width: 45.16vw;
 		top: -27.42vw;
 		left: 19.35vw;
+	}
+
+	.text-wrapper {
+		width: 100%;
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+
+	.inside-text-box {
+		margin-left: auto;
 	}
 }
 
@@ -161,17 +162,4 @@
 		top: -18%;
 	}
 
-	.text-wrapper {
-		width: 100%;
-		max-width: 1440px;
-		margin: 0 auto;
-	}
-
-	.inside-phones {
-		top: -4em;
-	}
-
-	.inside-text-box {
-		margin-left: auto;
-	}
 }
