@@ -18,7 +18,7 @@ const SectionOne = () => {
 					return (
 						<React.Fragment key={nanoid()}>
 							<h3 className='section-under-title'>{title}</h3>
-							<p className='section-text'>{text}</p>
+							<p className='section-text one-text'>{text}</p>
 						</React.Fragment>
 					)
 				})}
