@@ -23,8 +23,8 @@
 			padding: 11.11vw 0;
 			padding: clamp(
 					7em,
-					calc(7em + ((160 - 112) * ((100vw - 992px) / (1440 - 992)))),
-					10em
+					calc(7em + ((208 - 112) * ((100vw - 992px) / (1440 - 992)))),
+					13em
 				)
 				0;
 			position: relative;
@@ -49,6 +49,7 @@
 
 	.text-box {
 		&.three {
+			padding-left: 0;
 			margin-left: auto;
 			width: 35.34em;
 			margin-right: clamp(

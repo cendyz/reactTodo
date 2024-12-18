@@ -114,6 +114,13 @@
 
 	.login-btn {
 		color: $text-white;
+		transition: color 0.2s;
+
+		&:hover {
+			color: antiquewhite;
+			text-decoration: underline;
+			text-decoration-thickness: 2px;
+		}
 	}
 
 	.sign-btn {

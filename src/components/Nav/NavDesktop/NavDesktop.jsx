@@ -1,7 +1,7 @@
 import './NavDesktop.scss'
 import { mobileMenuData, mobileInnerMenu } from '../../../data'
 import { nanoid } from 'nanoid'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 import arrowImg from '../../../images/icon-arrow-light.svg'
 
@@ -9,8 +9,11 @@ const NavDesktop = () => {
 	const [active, setActive] = useState(null)
 	const [activeItems, setActiveItems] = useState(new Set())
 	const [unActvieItems, setUnActiveItems] = useState(new Set())
+	const menuRef = useRef(null)
+	
 
-	const handleActive = index => {
+	const handleActive = (index, event) => {
+		event.stopPropagation()
 		setActive(item => (item === index ? null : index))
 		setActiveItems(prevItem => {
 			const newItems = new Set(prevItem)
@@ -29,8 +32,21 @@ const NavDesktop = () => {
 		})
 	}
 
+	const handleClickOutside = event => {
+		if (menuRef.current && !menuRef.current.contains(event.target)) {
+			setActive(false)
+		}
+	}
+
+	useEffect(() => {
+		document.addEventListener('mousedown', handleClickOutside)
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside)
+		}
+	}, [])
+
 	return (
-		<nav className='nav-desktop'>
+		<nav className='nav-desktop' ref={menuRef}>
 			<div className='left-box'>
 				<img src='src/images/logo.svg' alt='logo' className='nav-logo' />
 				{mobileMenuData.map(({ name, group }, index) => {
@@ -41,7 +57,7 @@ const NavDesktop = () => {
 						<div className='link-container' key={index}>
 							<div
 								className='click-box'
-								onClick={() => handleActive(index)}>
+								onClick={(event) => handleActive(index, event)}>
 								<a href='#' className='desktop-main-link'>
 									{name}
 								</a>
@@ -61,7 +77,11 @@ const NavDesktop = () => {
 								{active === index &&
 									actualGroup.links.map(link => {
 										return (
-											<a href='#' className='desktop-link' key={nanoid()}>
+											<a
+												href='#'
+												className='desktop-link'
+												key={nanoid()}
+												ref={menuRef}>
 												{link}
 											</a>
 										)
