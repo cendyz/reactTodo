@@ -22,10 +22,10 @@ const SectionTwo = () => {
 						your site will load instantly, no matter where your readers
 						are, keeping your site competitive.
 					</p>
-					<div className='circles-box'>
-						<img src={bgPattern} alt='Circles' className='circles' />
-					</div>
 				</div>
+			<div className='circles-box'>
+				<img src={bgPattern} alt='Circles' className='circles' />
+			</div>
 			</div>
 		</section>
 	)
