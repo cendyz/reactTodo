@@ -1,4 +1,5 @@
-import { Nav, Header, Main, Footer } from './components/index'
+import { Nav, Main, Footer } from './components/index'
+import Header from './components/Header/Header'
 
 
 const App = () => {
