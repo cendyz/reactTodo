@@ -1,5 +1,5 @@
 import { SectionOne, SectionTwo, SectionThree } from './index'
-import './Main.scss'
+import './main.scss'
 
 const Main = () => {
 	return (

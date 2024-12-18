@@ -1,4 +1,4 @@
-import './NavDesktop.scss'
+import './navDesktop.scss'
 import { mobileMenuData, mobileInnerMenu } from '../../../data'
 import { nanoid } from 'nanoid'
 import { useState, useEffect, useRef } from 'react'
