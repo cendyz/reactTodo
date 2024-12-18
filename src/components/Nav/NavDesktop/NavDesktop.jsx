@@ -4,6 +4,7 @@ import { nanoid } from 'nanoid'
 import { useState, useEffect, useRef } from 'react'
 
 import arrowImg from '../../../images/icon-arrow-light.svg'
+import logo from '../../../images/logo.svg'
 
 const NavDesktop = () => {
 	const [active, setActive] = useState(null)
@@ -52,7 +53,7 @@ const NavDesktop = () => {
 	return (
 		<nav className='nav-desktop' ref={menuRef}>
 			<div className='left-box'>
-				<img src='src/images/logo.svg' alt='logo' className='nav-logo' />
+				<img src={logo} alt='logo' className='nav-logo' />
 				{mobileMenuData.map(({ name, group }, index) => {
 					const actualGroup = mobileInnerMenu.find(
 						item => item.group === group
